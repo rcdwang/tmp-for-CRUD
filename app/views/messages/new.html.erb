@@ -1,0 +1,7 @@
+<h1>New one message</h1>
+
+<%= form_for @message, :url => create_message_path(@message) do |f| %>
+<%= f.label :title, 'Title'  %>
+<%= f.text_field :title %>
+<%= f.submit 'Cretae' %>
+<% end %>

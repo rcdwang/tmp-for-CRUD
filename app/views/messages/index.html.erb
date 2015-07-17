@@ -1,0 +1,18 @@
+<h1>All the messages</h1>
+
+<% @messages.each do |message| %>
+	<P>
+		<%= message.title %>
+		<%= link_to('Show', show_message_path(message)) %>
+		<%= link_to('Edit', edit_message_path(message)) %>
+		<%= link_to('Delete', delete_message_path(message),:method => :delete) %>
+
+	</P>
+
+<% end %>
+
+<%= link_to('Index', messages_path) %>
+<br>
+************************************
+<br>
+<%= link_to('New', new_message_path) %>
